@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head >
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylsheet" type="text/ss" href="css/all.css"/>
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>高校学生社团服务管理一体化平台——登录</title>
+</head>
+<body>
+<form >
+    <div>
+        <section class="material-half-bg">
+            <div class="cover"></div>
+        </section>
+        <section class="login-content">
+            <div class="logo">
+                <h1>高校学生社团服务管理一体化平台</h1>
+            </div>
+            <div class="login-box">
+                <div class="login-form" >
+                    <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>用户登录</h3>
+                    <div class="form-group">
+                        <label class="control-label">学号</label>
+                        <input class="form-control" type="text" placeholder="请输入学号" >
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">密码</label>
+                        <input class="form-control" type="password" placeholder="请输入密码">
+
+                    </div>
+                    <div class="form-group">
+                        <div class="utility">
+                            <div class="animated-checkbox">
+                                <label>
+                                    <input   type="checkbox">
+                                    <span class="label-text">保持登录状态</span>
+                                </label>
+                            </div>
+                            <p class="semibold-text mb-2"><a href="#" data-toggle="flip">注册账号</a></p>
+                        </div>
+                    </div>
+                    <div class="form-group btn-container">
+                        <button Text="登录" class="btn btn-primary btn-block" \ >登录</button>
+
+                    </div>
+                </div>
+                <div class="forget-form" >
+                    <h3 class="login-head"><i class="fa fa-lg fa-fw fa-lock"></i>注册用户</h3>
+
+                    <div class="form-group">
+                        <label class="control-label">学号</label>
+                        <input class="form-control" type="text" placeholder="请输入学号">
+                    </div>
+                    <div class="form-group btn-container">
+                        <Button ID="Button2" runat="server" Text="注册" class="btn btn-primary btn-block"  > 注册 </Button>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <p class="semibold-text mb-0"><a href="#" data-toggle="flip"><i class="fa fa-angle-left fa-fw"></i> 返回登录</a></p>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Essential javascripts for application to work-->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <!-- The javascript plugin to display page loading on top-->
+        <script src="js/plugins/pace.min.js"></script>
+        <script type="text/javascript">
+            // Login Page Flipbox control
+            $('.login-content [data-toggle="flip"]').click(function() {
+                $('.login-box').toggleClass('flipped');
+                return false;
+            });
+        </script>
+
+    </div>
+</form>
+</body>
+</html>

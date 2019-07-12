@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular."/>
+    <!-- Twitter meta-->
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:site" content="@pratikborsadiya"/>
+    <meta property="twitter:creator" content="@pratikborsadiya"/>
+    <!-- Open Graph Meta-->
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Vali Admin"/>
+    <meta property="og:title" content="Vali - Free Bootstrap 4 admin theme"/>
+    <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin"/>
+    <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png"/>
+    <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular."/>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>高校学生社团服务管理一体化平台</title>
+</head>
+<body class="app sidebar-mini rtl">
+<form id="form1" runat="server">
+    <!-- Navbar-->
+    <header class="app-header"><a class="app-header__logo" href="index.html" style="font-size:13px">高校学生社团服务管理一体化平台</a>
+        <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
+        <!-- Navbar Right Menu-->
+        <ul class="app-nav">
+            <li class="app-search">
+                <input class="app-search__input" type="search" placeholder="查找">
+                <button class="app-search__button"><i class="fa fa-search"></i></button>
+            </li>
+            <!--Notification Menu-->
+            <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></a>
+                <ul class="app-notification dropdown-menu dropdown-menu-right">
+                    <li class="app-notification__title">你有 3 条未读消息</li>
+                    <div class="app-notification__content">
+                        <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
+                            <div>
+                                <p class="app-notification__message">来自  模拟联合国协会 的消息</p>
+                                <p class="app-notification__meta">7天以前</p>
+                            </div></a></li>
+                        <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
+                            <div>
+                                <p class="app-notification__message">来自 天文爱好者协会 的文件</p>
+                                <p class="app-notification__meta">15天以前</p>
+                            </div></a></li>
+                        <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
+                            <div>
+                                <p class="app-notification__message">来自 模拟联合国协会 的申请</p>
+                                <p class="app-notification__meta">17天以前</p>
+                            </div></a></li>
+
+                    </div>
+                    <li class="app-notification__footer"><a href="#">忽略全部</a></li>
+                </ul>
+            </li>
+            <!-- User Menu-->
+            <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
+                <ul class="dropdown-menu settings-menu dropdown-menu-right">
+
+                    <li><a class="dropdown-item" href="login.aspx"><i class="fa fa-sign-out fa-lg"></i> 退出</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <!-- Sidebar menu-->
+    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+        <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
+            <div>
+                <p class="app-sidebar__user-name">管理员</p>
+                <p class="app-sidebar__user-designation">0000000001</p>
+            </div>
+        </div>
+        <ul class="app-menu">
+            <li><a class="app-menu__item active" href="admin.aspx"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">首页</span></a></li>
+
+            <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">各项审批</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a class="treeview-item" href="fuwushenqing.aspx"><i class="icon fa fa-circle-o"></i> 服务申请审批</a></li>
+                    <li><a class="treeview-item" href="shiwushenqing.aspx"><i class="icon fa fa-circle-o"></i> 事务申请审批</a></li>
+                    <li><a class="treeview-item" href="huodongchangdi.aspx" target="_blank" rel="noopener"><i class="icon fa fa-circle-o"></i>活动场地审批</a></li>
+
+                </ul>
+            </li>
+
+
+            <li><a class="app-menu__item" href="xiaoxizhongxin.aspx"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">消息中心</span></a></li>
+            <li><a class="app-menu__item" href="shetuanguanli.aspx"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">社团管理</span></a></li>
+            <li><a class="app-menu__item  " href="piliangzhuce.aspx"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">批量注册</span></a></li>
+
+
+
+        </ul>
+    </aside>
+    <main class="app-content">
+        <div class="app-title">
+            <div>
+                <h1><i class="fa fa-dashboard"></i> 首页</h1>
+                <p>欢迎使用高校学生社团服务管理一体化平台！</p>
+            </div>
+            <ul class="app-breadcrumb breadcrumb">
+                <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+                <li class="breadcrumb-item"><a href="#">首页</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
+                    <div class="info">
+                        <h4>我加入的社团</h4>
+                        <p><b>5</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="widget-small info coloured-icon"><i class="icon fa fa-cog fa-3x"></i>
+                    <div class="info">
+                        <h4>我管理的社团</h4>
+                        <p><b>2</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="widget-small warning coloured-icon"><i class="icon fa fa-line-chart fa-3x"></i>
+                    <div class="info">
+                        <h4>社团总数</h4>
+                        <p><b>103</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="widget-small danger coloured-icon"><i class="icon fa fa-comments-o  fa-3x"></i>
+                    <div class="info">
+                        <h4>我的消息总数</h4>
+                        <p><b>50</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="tile">
+                    <h3 class="tile-title">V1.0版本功能简介</h3>
+                    <ul>
+                        <li>支持创建社团、注销社团</li>
+                        <li>支持浏览社团列表</li>
+                        <li style="">支持对个人资料进行修改.</li>
+                        <li>支持更多活动申请、场地申请、人员资金管理等功能。</li>
+                    </ul>
+                    <p>    后期还会开发协会荣誉功能，十佳社团在线申请投票功能，协会指导老师用户功能等，敬请期待！</p>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tile">
+                    <h3 class="tile-title">使用简介</h3>
+                    <p>首先感谢选择本高校学生社团服务管理一体化平台！</p>
+                    <p>本高校学生社团服务管理一体化平台意在为高校提供数字化的社团管理服务。提供社团创建、注销活动申请、社团事务审批等功能，方便对高校社团进行数字化管理，也为同学们的社团建设进行服务。点击 <a href="#" target="_blank">这里</a> 访问了解网站的版本资料.</p>
+                    <p>本平台为ASP.NET程序设计课程设计作业，由东北林业大学信息与计算机工程学院2016级软件工程2班张峻巍独立开发完成。点击<a href="mailto:1174681078@qq.com" target="_blank">这里</a>向开发者发送邮件反馈问题。</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Essential javascripts for application to work-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="js/plugins/pace.min.js"></script>
+    <!-- Page specific javascripts-->
+    <script type="text/javascript" src="js/plugins/chart.js"></script>
+
+
+</form>
+</body>
+</html>

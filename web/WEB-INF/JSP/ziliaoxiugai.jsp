@@ -1,0 +1,329 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: kfzjw008
+  Date: 2019-07-09
+  Time: 10:03
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <c:url value="/" var="basepath"></c:url>
+    <base href="${basepath }">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular."/>
+    <!-- Twitter meta-->
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:site" content="@pratikborsadiya"/>
+    <meta property="twitter:creator" content="@pratikborsadiya"/>
+    <!-- Open Graph Meta-->
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Vali Admin"/>
+    <meta property="og:title" content="Vali - Free Bootstrap 4 admin theme"/>
+    <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin"/>
+    <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png"/>
+    <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular."/>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="../../sources/css/main.css"/>
+    <link rel="stylsheet" type="text/ss" href="../../sources/css/all.css"/>
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>高校学生社团服务管理一体化平台</title>
+</head>
+<body class="app sidebar-mini rtl">
+<div id="form1" runat="server">
+    <!-- Navbar-->
+    <header class="app-header"><a class="app-header__logo" href="home" style="font-size:13px">高校学生社团服务管理一体化平台</a>
+        <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
+        <!-- Navbar Right Menu-->
+        <ul class="app-nav">
+            <li class="app-search">
+                <input class="app-search__input" type="search" placeholder="查找">
+                <button class="app-search__button"><i class="fa fa-search"></i></button>
+            </li>
+            <!--Notification Menu-->
+            <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></a>
+                <ul class="app-notification dropdown-menu dropdown-menu-right">
+                    <li class="app-notification__title">你有 3 条未读消息</li>
+                    <div class="app-notification__content">
+                        <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
+                            <div>
+                                <p class="app-notification__message">来自  社团联合会 的消息</p>
+                                <p class="app-notification__meta">2天以前</p>
+                            </div></a></li>
+                        <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
+                            <div>
+                                <p class="app-notification__message">来自 社团联合会 的文件</p>
+                                <p class="app-notification__meta">5天以前</p>
+                            </div></a></li>
+                        <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
+                            <div>
+                                <p class="app-notification__message">来自 校团委 的公告</p>
+                                <p class="app-notification__meta">7天以前</p>
+                            </div></a></li>
+
+                    </div>
+                    <li class="app-notification__footer"><a href="#">忽略全部</a></li>
+                </ul>
+            </li>
+            <!-- User Menu-->
+            <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
+                <ul class="dropdown-menu settings-menu dropdown-menu-right">
+                    <li><a class="dropdown-item" href="ziliaoxiugai"><i class="fa fa-cog fa-lg"></i> 设置</a></li>
+                    <li><a class="dropdown-item" href="ziliaoxiugai"><i class="fa fa-user fa-lg"></i>我的资料</a></li>
+                    <li><a class="dropdown-item" href="index"><i class="fa fa-sign-out fa-lg"></i> 退出</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <!-- Sidebar menu-->
+    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+        <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
+            <div>
+                <p class="app-sidebar__user-name"><Label ID="Label1">${username}</Label></p>
+                <p class="app-sidebar__user-designation"><Label ID="Label2">${userxh}</Label></p>
+            </div>
+        </div>
+        <ul class="app-menu">
+            <li><a class="app-menu__item " href="home"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">首页</span></a></li>
+            <li><a class="app-menu__item" href="tzgg"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">通知公告</span></a></li>
+            <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">我的社团</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a class="treeview-item" href="wjrd"><i class="icon fa fa-circle-o"></i> 我加入的社团</a></li>
+                    <li><a class="treeview-item" href="wgld" target="_blank" rel="noopener"><i class="icon fa fa-circle-o"></i>我管理的社团</a></li>
+
+                </ul>
+            </li>
+
+            <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">社团列表</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a class="treeview-item" href="quanbushetuan"><i class="icon fa fa-circle-o"></i>全部社团</a></li>
+                    <li><a class="treeview-item" href="youxiushetuan"><i class="icon fa fa-circle-o"></i> 优秀社团</a></li>
+                    <li><a class="treeview-item" href="buhegeshetuan"><i class="icon fa fa-circle-o"></i> 不合格社团</a></li>
+                </ul>
+            </li>
+            <li><a class="app-menu__item" href="chuangjianshetuan"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">创建社团</span></a></li>
+
+            </li>
+
+            <li><a class="app-menu__item active" href="ziliaoxiugai"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">个人中心</span></a></li>
+        </ul>
+    </aside>
+    <main class="app-content">
+        <div class="row user">
+            <div class="col-md-12">
+                <div class="profile">
+                    <div class="info"><img class="user-img" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg">
+                        <h4>${username}</h4>
+                        <p>${userxh}</p>
+                    </div>
+                    <div class="cover-image"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="tile p-0">
+                    <ul class="nav flex-column nav-tabs user-tabs">
+                        <li class="nav-item"><a class="nav-link active" href="#wdzl" data-toggle="tab">我的资料</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#zlxg" data-toggle="tab">资料修改</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#wdxx" data-toggle="tab">我收到的消息</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#wdxx2" data-toggle="tab">我发送的消息</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="wdzl">
+                        <div class="tile user-settings">
+                            <h4 class="line-head">我的资料</h4>
+                            <div>
+                                <div class="row mb-4">
+                                    <div class="col-md-4">
+                                        <label>姓名：</label>
+                                        <p>
+                                            <Label ID="Label3" runat="server" Text="Label">${username}</Label>
+                                        </p>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 mb-4">
+                                        <label>学号：</label>
+                                        <p>
+                                            <Label ID="Label4" runat="server" Text="Label">${userxh}</Label>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-8 mb-4">
+                                        <label>手机号：</label>
+                                        <p>
+                                            <Label ID="Label5" runat="server" Text="Label">${usersj}</Label>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-8 mb-4">
+                                        <label>性别：</label>
+                                        <p>
+                                            <Label ID="Label6" runat="server" Text="Label">${usersex}</Label>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-8 mb-4">
+                                        <label>学院：</label>
+                                        <p>
+                                            <Label ID="Label7" runat="server" Text="Label">${usercollege}</Label>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-8 mb-4">
+                                        <label>专业：</label>
+                                        <p>
+                                            <Label ID="Label8" runat="server" Text="Label">${userzhuanye}</Label>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="zlxg">
+                        <form  action="updateuserServlet"  method="post" >
+                        <div class="tile user-settings">
+                            <h4 class="line-head">资料修改</h4>
+                            <div>
+                                <div class="row mb-4">
+                                    <div class="col-md-4">
+                                        <label>姓名</label>
+                                        <input name="name" runat="server" class="form-control" type="text" placeholder="此处填写真实姓名"  value="${username}">
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>学号</label>
+                                        <input ID="TextBox2" runat="server" class="form-control"  name="schoolid"  type="text"  disabled=""  value="${userxh}">
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 mb-4">
+                                        <label>电话</label>
+                                        <input ID="TextBox3" runat="server" name="mobile" class="form-control" type="text" placeholder="此处填写个人常用手机号码" value="${usersj}">
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-8 mb-4">
+                                        <label>学院</label>
+                                        <input ID="TextBox4" runat="server" class="form-control" name="college" type="text" placeholder="此处填写学院全称" value="${usercollege}">
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-8 mb-4">
+                                        <label>专业</label>
+                                        <input ID="TextBox5"  class="form-control" name="zhuanye" type="text" placeholder="此处填写专业全称" value="${userzhuanye}">
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-8 mb-4">
+                                        <label>密码</label>
+                                        <input ID="TextBox6" runat="server" class="form-control"  name="password" type="password"  placeholder="如需修改密码请在此处填写" value="${userp}">
+
+                                    </div>
+                                </div>
+                                <div class="row mb-10">
+                                    <div class="col-md-12">
+                                        <button ID="Button1" Text="保存并提交" class="btn btn-primary" type="submit" >保存并提交</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="wdxx">
+
+<c:forEach items="${amessage}" var="u">
+                        <div class="timeline-post">
+                            <div class="post-media"><a href="#"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg"></a>
+                                <div class="content">
+                                    <h5><a href="#">${u.userform}</a></h5>
+                                    <p class="text-muted"><small>${u.time}</small></p>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <p> ${u.context}</p>
+                            </div>
+                            <ul class="post-utility">
+                                <li class="likes" ><a href="#"><i class="fa fa-fw fa-lg fa-thumbs-o-up"></i>13389喜欢</a></li>
+                                <li class="shares" ><a href="#"><i class="fa fa-fw fa-lg fa-share"></i>1723分享</a></li>
+                                <li class="comments"  ><i class="fa fa-fw fa-lg fa-comment-o"></i> 532评论</li>
+                            </ul>
+                        </div>
+</c:forEach>
+
+                    </div>
+                    <div class="tab-pane fade" id="wdxx2">
+                        <form class="tile user-settings" action="messageServlet"  method="post">
+                            <h4 class="line-head">发送消息</h4>
+
+                            <label class="control-label col-md-3">收件人学号</label>
+                            <p>     <input ID="Textx2" runat="server" name="xuehao"  class="form-control col-md-8" type="text" placeholder="输入收件人学号" > </p>
+
+
+                            <label class="control-label col-md-3">消息内容</label>
+                            <p>      <textarea ID="Te2" runat="server" row="4" name="context"  class="form-control col-md-8" type="text" placeholder="输入消息内容" >输入消息内容</textarea>  </p>
+                            <button ID="Buton1" Text="发送消息" class="btn btn-primary" type="submit" >发送</button>
+                        </form>
+
+                        <c:forEach items="${bmessage}" var="u">
+                            <div class="timeline-post">
+                                <div class="post-media"><a href="#"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg"></a>
+                                    <div class="content">
+                                        <h5><a href="#">发送给：${u.userform}</a></h5>
+                                        <p class="text-muted"><small>${u.time}</small></p>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <p> ${u.context}</p>
+                                </div>
+                                <ul class="post-utility">
+                                    <li class="likes" ><a href="#"><i class="fa fa-fw fa-lg fa-thumbs-o-up"></i>13389喜欢</a></li>
+                                    <li class="shares" ><a href="#"><i class="fa fa-fw fa-lg fa-share"></i>1723分享</a></li>
+                                    <li class="comments"  ><i class="fa fa-fw fa-lg fa-comment-o"></i> 532评论</li>
+                                </ul>
+                            </div>
+                        </c:forEach>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Essential javascripts for application to work-->
+    <!-- Essential javascripts for application to work-->
+    <script src="../../sources/js/jquery-3.2.1.min.js"></script>
+    <script src="../../sources/js/popper.min.js"></script>
+    <script src="../../sources/js/bootstrap.min.js"></script>
+    <script src="../../sources/js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="../../sources/js/plugins/pace.min.js"></script>
+    <!-- Page specific javascripts-->
+    <script type="text/javascript" src="../../sources/js/plugins/chart.js"></script>
+
+
+
+</div>
+</body>
+</html>
