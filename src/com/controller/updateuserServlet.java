@@ -37,7 +37,7 @@ int id=Integer.parseInt(request.getSession().getAttribute("userid").toString());
 		//int js ;js= Integer.parseInt(request.getParameter("jg"));
 		userService.updateUserss( id,name ,  mobile,college,zhuanye,password);
 		//out.print("<script language='javascript'>alert('666！');window.location.href='index.jsp';</script>");
-		JOptionPane.showMessageDialog(null, "资料修改成功！");
+		//JOptionPane.showMessageDialog(null, "资料修改成功！");
 		//request.getSession().setAttribute("userid", user.getId());
 		//request.getSession().setAttribute("userxh", user.getUserName());
 		//request.getSession().setAttribute("userpower", user.getPower());

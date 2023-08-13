@@ -205,7 +205,6 @@ public class UserServiceImpl implements UserService {
 			logger.info(String.valueOf(stid));;
 			st.setInt(3, p);
 			st.executeUpdate();
-
 		}catch (SQLException e) {
 			// TODO: handle exception
 			logger.warning(e.getMessage());

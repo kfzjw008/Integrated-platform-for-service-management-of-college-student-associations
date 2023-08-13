@@ -6,7 +6,6 @@ import java.util.List;
 
 public interface UserService {
 	public void addUsers(String schoolid);
-	//添加用户
 	public List<tongzhi> listtongzhi();
 	public List<shetuan> getshetuan() ;
 	public List<shetuan> getshetuan2() ;

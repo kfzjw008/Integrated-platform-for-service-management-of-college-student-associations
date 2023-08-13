@@ -41,7 +41,7 @@ public class admindeleteuserServlet extends HttpServlet {
       }
 
       userService.deleteuserst( id,stid);
-      JOptionPane.showMessageDialog(null, "删除用户成功！请及时通知用户清退理由。");
+      //JOptionPane.showMessageDialog(null, "删除用户成功！请及时通知用户清退理由。");
       userService.addmessage( stid,id,"【清退通知】我们已经将您清退出社团："+String.valueOf(request.getSession().getAttribute("shetuanname"))+",如有疑问，请联系社团负责人，谢谢！");
     request.getRequestDispatcher("/WEB-INF/JSP/stdetail3.jsp").forward(request, response);
     return;

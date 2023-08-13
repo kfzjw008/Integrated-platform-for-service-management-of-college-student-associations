@@ -28,7 +28,7 @@ public class AddUserServlet extends HttpServlet {//单一注册用户
 	    
 		userService.addUsers(schoolid);
 		//out.print("<script language='javascript'>alert('666！');window.location.href='index.jsp';</script>");
-		JOptionPane.showMessageDialog(null, "注册成功！初始密码与账号相同");//swing
+		//JOptionPane.showMessageDialog(null, "注册成功！初始密码与账号相同");//swing
 		response.sendRedirect(request.getContextPath() + "/index");
 		return;
 	}

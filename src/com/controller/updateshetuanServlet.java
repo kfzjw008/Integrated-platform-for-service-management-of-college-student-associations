@@ -40,7 +40,7 @@ public class updateshetuanServlet extends HttpServlet {//单一注册用户
 		request.getSession().getAttribute("user");
 		request.getSession().getAttribute("userid");
 		request.setAttribute("users", userService.getmyjrshetuanuser(id));
-		JOptionPane.showMessageDialog(null, "社团资料修改成功！");
+		//JOptionPane.showMessageDialog(null, "社团资料修改成功！");
 		response.sendRedirect(request.getContextPath() + "/wgld");
 		return;
 	}

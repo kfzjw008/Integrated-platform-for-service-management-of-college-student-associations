@@ -42,7 +42,7 @@ public class deleteuserstServlet extends HttpServlet {//单一注册用户
 		//int js ;js= Integer.parseInt(request.getParameter("jg"));
 		userService.deleteuserst( userid,stid);
 		//out.print("<script language='javascript'>alert('666！');window.location.href='index.jsp';</script>");
-		JOptionPane.showMessageDialog(null, "社团退出成功！请及时联系负责人通知退出事宜。");
+		//JOptionPane.showMessageDialog(null, "社团退出成功！请及时联系负责人通知退出事宜。");
 		response.sendRedirect(request.getContextPath() + "/wjrd");
 		return;
 	}

@@ -24,15 +24,10 @@ public class chuangjianshetuanServlet extends HttpServlet {
   private UserService userService = ServiceFactory.getUserService();
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     request.setAttribute("students", userService.listUsers());
     // TODO Auto-generated method stub
     logger.info("Hello Servlet你说你马呢");
     //request.setAttribute("students", studentService.getStudents());
     request.getRequestDispatcher("/WEB-INF/JSP/chuangjianshetuan.jsp").forward(request, response);
-
-
   }
-
-
 }

@@ -10,23 +10,18 @@ public class shetuan {
  private String telephone;
  private int ys;
  private int jg;
-
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public String getTeacher() {
         return teacher;
     }
@@ -38,7 +33,6 @@ public class shetuan {
     public String getIntention() {
         return intention;
     }
-
     public void setIntention(String intention) {
         this.intention = intention;
     }
@@ -46,19 +40,15 @@ public class shetuan {
     public String getItem() {
         return item;
     }
-
     public void setItem(String item) {
         this.item = item;
     }
-
     public String getWechat() {
         return wechat;
     }
-
     public void setWechat(String wechat) {
         this.wechat = wechat;
     }
-
     public String getTelephone() {
         return telephone;
     }

@@ -42,7 +42,7 @@ public class AddstuserServlet extends HttpServlet {//单一注册用户
 		//int js ;js= Integer.parseInt(request.getParameter("jg"));
 		userService.userst( userid,stid,1);
 		//out.print("<script language='javascript'>alert('666！');window.location.href='index.jsp';</script>");
-		JOptionPane.showMessageDialog(null, "社团加入成功！请及时联系负责人缴纳会费");
+		//JOptionPane.showMessageDialog(null, "社团加入成功！请及时联系负责人缴纳会费");
 		response.sendRedirect(request.getContextPath() + "/wjrd");
 		return;
 	}

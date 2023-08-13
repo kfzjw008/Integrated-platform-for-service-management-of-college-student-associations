@@ -44,7 +44,7 @@ public class liuyanServlet extends HttpServlet {//单一注册用户
 		//int js ;js= Integer.parseInt(request.getParameter("jg"));
 		userService.addliuyan( userid,stid,context);
 		//out.print("<script language='javascript'>alert('666！');window.location.href='index.jsp';</script>");
-		JOptionPane.showMessageDialog(null, "留言发送成功！");
+		//JOptionPane.showMessageDialog(null, "留言发送成功！");
 		response.sendRedirect(request.getContextPath() + "/stdetail2Servlet?uid="+stid);
 		return;
 	}

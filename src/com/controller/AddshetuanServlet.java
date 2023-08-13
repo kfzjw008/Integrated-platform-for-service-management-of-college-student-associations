@@ -51,7 +51,7 @@ public class AddshetuanServlet extends HttpServlet {//单一注册用户
 		//int js ;js= Integer.parseInt(request.getParameter("jg"));
 		userService.addshetuan( id,name , teacher, intention,item, wechat, telephone, ys, js);
 		//out.print("<script language='javascript'>alert('666！');window.location.href='index.jsp';</script>");
-		JOptionPane.showMessageDialog(null, "社团创建申请提交成功！我们会在三日内联系你并通过手机告知你申请结果，请保持联络畅通并在三日内将社团纸质版材料上交到社团联合会办公室。逾期未交视为放弃申请。");
+		//JOptionPane.showMessageDialog(null, "社团创建申请提交成功！我们会在三日内联系你并通过手机告知你申请结果，请保持联络畅通并在三日内将社团纸质版材料上交到社团联合会办公室。逾期未交视为放弃申请。");
 		response.sendRedirect(request.getContextPath() + "/home");
 		return;
 	}

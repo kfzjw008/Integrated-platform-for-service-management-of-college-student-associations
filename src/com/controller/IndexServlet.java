@@ -34,8 +34,5 @@ public class IndexServlet extends HttpServlet {
     request.getSession().invalidate();
     request.getRequestDispatcher("/WEB-INF/JSP/index.jsp").forward(request, response);
     return;
-
   }
-
-
 }
